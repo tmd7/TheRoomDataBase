@@ -4,5 +4,6 @@
     <string name="information">Information</string>
     <string name="temperature">Temperature</string>
     <string name="humidity">Humidity</string>
+    <string name="save_button">Save</string>
 
 </resources>
