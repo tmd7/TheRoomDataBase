@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TheRoomDataBase</string>
+    <string name="action_settings">Settings</string>
+    <string name="information">Information</string>
+    <string name="temperature">Temperature</string>
+    <string name="humidity">Humidity</string>
+
+</resources>
