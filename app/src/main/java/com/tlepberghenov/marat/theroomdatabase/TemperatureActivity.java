@@ -61,7 +61,7 @@ public class TemperatureActivity extends AppCompatActivity {
         ContentValues values = new ContentValues();
         values.put(TheRoomDataBaseContract.TemperatureHumidity.COLUMN_TEMPERATURE, temperature);
         values.put(TheRoomDataBaseContract.TemperatureHumidity.COLUMN_HUMIDITY, humidity);
-        values.put(TheRoomDataBaseContract.TemperatureHumidity.COLUM_ROOM, 0);
+        values.put(TheRoomDataBaseContract.TemperatureHumidity.COLUMN_ROOM, 0);
 
         //Inserts a new line and remembers the his index
         long newRowId = db.insert(TheRoomDataBaseContract.TemperatureHumidity.TABLE_NAME, null, values);

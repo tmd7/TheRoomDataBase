@@ -36,6 +36,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        FloatingActionButton fab2 = (FloatingActionButton) findViewById(R.id.fab2);
+        fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, RoomsActivity.class);
+                startActivity(intent);
+            }
+        });
+
         mDbHelper = new DbHelper(this);
     }
 
@@ -78,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                 TheRoomDataBaseContract.TemperatureHumidity._ID,
                 TheRoomDataBaseContract.TemperatureHumidity.COLUMN_TEMPERATURE,
                 TheRoomDataBaseContract.TemperatureHumidity.COLUMN_HUMIDITY,
-                TheRoomDataBaseContract.TemperatureHumidity.COLUM_ROOM
+                TheRoomDataBaseContract.TemperatureHumidity.COLUMN_ROOM
         };
 
         String selection = TheRoomDataBaseContract.TemperatureHumidity._ID  + " >?";
@@ -102,13 +111,13 @@ public class MainActivity extends AppCompatActivity {
             displayTextView.append(TheRoomDataBaseContract.TemperatureHumidity._ID + " | " +
                     TheRoomDataBaseContract.TemperatureHumidity.COLUMN_TEMPERATURE + " | " +
                     TheRoomDataBaseContract.TemperatureHumidity.COLUMN_HUMIDITY + " | " +
-                    TheRoomDataBaseContract.TemperatureHumidity.COLUM_ROOM + " | \n");
+                    TheRoomDataBaseContract.TemperatureHumidity.COLUMN_ROOM + " | \n");
 
             //Finds index
             int idColumnIndex = cursor.getColumnIndex(TheRoomDataBaseContract.TemperatureHumidity._ID);
             int temperatureIndex = cursor.getColumnIndex(TheRoomDataBaseContract.TemperatureHumidity.COLUMN_TEMPERATURE);
             int humidityIndex = cursor.getColumnIndex(TheRoomDataBaseContract.TemperatureHumidity.COLUMN_HUMIDITY);
-            int roomIndex = cursor.getColumnIndex(TheRoomDataBaseContract.TemperatureHumidity.COLUM_ROOM);
+            int roomIndex = cursor.getColumnIndex(TheRoomDataBaseContract.TemperatureHumidity.COLUMN_ROOM);
 
             //Going to all rows
             while (cursor.moveToNext()) {

@@ -24,7 +24,7 @@ public class DbHelper extends SQLiteOpenHelper {
                 + TheRoomDataBaseContract.TemperatureHumidity._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + TheRoomDataBaseContract.TemperatureHumidity.COLUMN_TEMPERATURE + " INTEGER NOT NULL DEFAULT 0, "
                 + TheRoomDataBaseContract.TemperatureHumidity.COLUMN_HUMIDITY + " INTEGER NOT NULL DEFAULT 0, "
-                + TheRoomDataBaseContract.TemperatureHumidity.COLUM_ROOM + " TEXT NOT NULL DEFAULT 0);";
+                + TheRoomDataBaseContract.TemperatureHumidity.COLUMN_ROOM + " TEXT NOT NULL DEFAULT 0);";
 
         //run creating the table
         db.execSQL(SQL_CREATE_DATA_TABLE);
